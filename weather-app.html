@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS personal Weather APP</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="weather.css">
+</head>
+<body>
+
+<div class="sky-blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+<div class="stars" id="stars"></div>
+<div class="rain-container" id="rainContainer"></div>
+<div class="snow-container" id="snowContainer"></div>
+
+<div class="app">
+
+  <div class="search-wrap">
+    <input type="text" class="search-input" id="cityInput" placeholder="Search city or location…" autocomplete="off" />
+    <button class="loc-btn" id="locBtn" title="Use my location">📍</button>
+    <button class="search-btn" id="searchBtn">Search</button>
+  </div>
+
+  <div id="unitToggleWrap" style="display:none;">
+    <div class="unit-toggle">
+      <button class="unit-btn active" id="btnC" onclick="setUnit('C')">°C</button>
+      <button class="unit-btn" id="btnF" onclick="setUnit('F')">°F</button>
+    </div>
+  </div>
+
+  <div id="statusMsg" class="status-msg">
+    <span style="font-size:52px;">🌤️</span>
+    <span>Search for a city or use your location to see the weather.</span>
+  </div>
+
+  <div id="weatherContent" style="display:none;"></div>
+
+  <div class="footer" id="footer"></div>
+</div>
+
+<script src="weather.js"></script>
+</script>
+</body>
+</html>
