@@ -1,0 +1,59 @@
+/* Daily */
+  .daily-list { display: flex;
+     flex-direction: column; 
+     gap: 10px; 
+     margin-bottom: 1.5rem; 
+    }
+
+  .day-row {
+    background: var(--card-bg); 
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm); 
+    backdrop-filter: blur(12px);
+    padding: 14px 20px; 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem;
+    animation: fadeUp 0.5s ease;
+  }
+
+  .day-name { 
+    width: 80px; 
+    font-size: 14px; 
+    font-weight: 500; 
+  }
+
+  .day-icon { 
+    font-size: 24px; 
+    width: 34px; 
+    text-align: center; }
+
+  .day-desc { 
+    flex: 1; 
+    font-size: 13px; 
+    color: var(--text-muted); 
+    text-transform: capitalize; 
+  }
+  .day-temps { 
+    display:  flex; 
+    gap: 10px; 
+    align-items: center; 
+    font-size: 14px; 
+  }
+
+  .day-high { font-weight: 500; }
+  .day-low { color: var(--text-muted); }
+  .day-rain-bar { 
+    flex: 1; 
+    max-width: 60px; 
+    height: 4px; 
+    background: rgba(255,255,255,0.1); 
+    border-radius: 4px; 
+    overflow: hidden;
+   }
+
+  .day-rain-fill { 
+    height: 100%; 
+    background: var(--accent2); 
+    border-radius: 4px; 
+  }

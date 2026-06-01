@@ -1,0 +1,66 @@
+/* Hourly */
+  .section-title {
+    font-size: 11px; 
+    letter-spacing: 0.12em; 
+    text-transform: uppercase;
+    color: var(--text-muted); 
+    margin-bottom: 1rem;
+  }
+
+  .hourly-wrap { 
+    position: relative; 
+    margin-bottom: 1.5rem; 
+  }
+
+  .scroll-btn {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 5; 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15); 
+    border: 1px solid var(--glass-border);
+    color: var(--text); 
+    font-size: 16px; 
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    backdrop-filter: blur(10px); 
+    transition: background 0.2s, opacity 0.2s;
+    user-select: none;
+  }
+
+  .scroll-btn:hover { background: rgba(255,255,255,0.28); }
+  .scroll-btn:active { transform: translateY(-50%) scale(0.94); }
+  .scroll-btn.hidden { opacity: 0; pointer-events: none; }
+  .scroll-btn-left { left: -14px; }
+  .scroll-btn-right { right: -14px; }
+  .hourly-scroll {
+    display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+
+  .hourly-scroll::-webkit-scrollbar { display: none; }
+  .hour-card {
+    min-width: 72px; 
+    background: var(--card-bg);
+     border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm); 
+    backdrop-filter: blur(12px);
+    padding: 14px 10px; 
+    text-align: center;
+     flex-shrink: 0; 
+     transition: background 0.2s;
+    animation: fadeUp 0.5s ease;
+  }
+
+
+  .hour-card.active { background: rgba(249,199,79,0.18); border-color: rgba(249,199,79,0.5); }
+  .hour-card:hover { background: rgba(255,255,255,0.13); }
+  .hour-time { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
+  .hour-icon { font-size: 22px; margin-bottom: 8px; }
+  .hour-temp { font-size: 15px; font-weight: 500; }
+  .hour-rain { font-size: 10px; color: var(--accent2); margin-top: 4px; }

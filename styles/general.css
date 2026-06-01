@@ -1,0 +1,29 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sky-day: #0f4c81;
+    --sky-eve: #1a1a2e;
+    --accent: #f9c74f;
+    --accent2: #90e0ef;
+    --glass: rgba(255,255,255,0.10);
+    --glass-border: rgba(255,255,255,0.18);
+    --text: #f0f4ff;
+    --text-muted: rgba(240,244,255,0.65);
+    --card-bg: rgba(255,255,255,0.07);
+    --radius: 20px;
+    --radius-sm: 12px;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    background: var(--sky-day);
+    color: var(--text);
+    overflow-x: hidden;
+    transition: background 1.2s ease;
+  }
+
+  body.evening { background: var(--sky-eve); }
+  body.cloudy { background: #2b4162; }
+  body.rainy { background: #1c3144; }
+  body.snowy { background: #2c3e50; }

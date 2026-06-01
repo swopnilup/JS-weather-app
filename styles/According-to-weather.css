@@ -1,0 +1,69 @@
+/* Stars (shown at night) */
+  .stars { 
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 0; 
+    opacity: 0; 
+    transition: 
+    opacity 1s; }
+
+  body.evening .stars { 
+    opacity: 1; 
+  }
+  .star {
+    position: absolute; 
+    width: 2px; 
+    height: 2px; 
+    background: #fff; 
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle { from { opacity: 0.2; } to { opacity: 1; } }
+
+  /* Rain particles */
+  .rain-container { 
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 0; 
+    opacity: 0; 
+    transition: 
+    opacity 0.8s; }
+
+  body.rainy .rain-container { 
+    opacity: 1; 
+  
+  }
+  .raindrop {
+    position: absolute; 
+    width: 1px; 
+    background: linear-gradient(transparent, rgba(144,224,239,0.6));
+    border-radius: 4px; 
+    animation: fall linear infinite;
+  }
+  @keyframes fall { from { transform: translateY(-100px); opacity: 0; } 10% { opacity: 1; } to { transform: translateY(110vh); opacity: 0; } }
+
+  /* Snow particles */
+  .snow-container { 
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 0; 
+    opacity: 0; 
+    transition: 
+    opacity 0.8s; }
+
+
+  body.snowy 
+  .snow-container { 
+    opacity: 1; 
+  }
+  .snowflake {
+    position: absolute; 
+    width: 6px; 
+    height: 6px; 
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+  }
+  @keyframes snowfall { from { transform: translateY(-20px) translateX(0); } to { transform: translateY(110vh) translateX(40px); } }
